@@ -73,14 +73,11 @@ header {
     z-index: 1000;
     overflow: hidden;
     border-bottom: 2px solid rgb(255, 0, 0);
-    display: flex;               /* enables flexbox */
-    justify-content: center;     /* centers items horizontally */
-    align-items: center;         /* centers items vertically */
-
-
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
     gap: 1px;
 }
-
 
 .top-navigation a {
     transition: background 0.3s;
@@ -91,7 +88,7 @@ header {
     text-decoration: none;
     font-size: 17px;
 
-    display: flex;               /* ensures icon + text align */
+    display: flex;              
     align-items: center;
     gap: 5px;
   }
@@ -101,30 +98,20 @@ header {
     color: rgb(255, 255, 255);
   }
 
-  
-
-  /*.top-navigation a.split {
-    float: right;
-    background-color: rgb(63, 0, 0);
-    color: white;
-  }*/
-
   .top-navigation a.split:hover {
-
     background-color: rgb(128, 0, 0);
     color: rgb(255, 255, 255);
-    
   }
 
   /*--------------THIS IS FOR HOME SECTION-------------------*/
 
 #HOME {
     background-image: linear-gradient(to right, rgb(255, 58, 107), rgb(0, 0, 0), rgb(68, 5, 5));
-    display: flex;               /* side-by-side layout */
-    align-items: center;         /* vertically centers text with the box */
-    justify-content: center;     /* centers the whole block horizontally */
-    height: 100vh;               /* full screen height */
-    gap: 50px;                   /* space between image and text */
+    display: flex;               
+    align-items: center;         
+    justify-content: center;     
+    height: 100vh;               
+    gap: 50px;                   
   }
 
 #HOME a{
@@ -139,8 +126,6 @@ header {
 #HOME a:hover{
     color: yellow;
 }
-
-
 
 .product-image img{
     width: auto;
@@ -185,8 +170,8 @@ header {
 }
 
 
-
-
+/*Header for each division in the landing page*/
+/*---------------------------*/
 
 #promotion{
     font-family: 'Momotrust', sans-serif;
@@ -232,34 +217,6 @@ header {
     margin: auto;
     }
 
-/*.productbanner {
-    display: none;
-  }*/
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(255, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    }
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    }
-
-.prev:hover, .next:hover {
-    background-color: rgba(78, 0, 0, 0.8);
-    }
-
 .text {
     background-image: linear-gradient(to top, black, rgb(36, 0, 0, 0.5), transparent);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -272,42 +229,7 @@ header {
     width: 100%;
     text-align: center;
     }
-      
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    }
-      
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: rgb(0, 0, 0);
-     border-radius: 50%;
-     display: inline-block;
-     transition: background-color 0.6s ease;
-    }
-      
-.active, .dot:hover {
-    background-color: #ff0000;
-    }
-      
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-    }
-      
-/*@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-    }*/
+         
 
 /*--------------THIS IS FOR SERVICE----------------*/
 
@@ -597,7 +519,6 @@ header {
     border: none;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
-    transition: background 0.3s;
   }
   
   .support-form button:hover {
@@ -772,7 +693,7 @@ header {
 
 .cart-main{
     display: grid;
-    grid-template-columns: 2fr 2fr; /* Left (cart) and right (summary) */
+    grid-template-columns: 2fr 2fr;
     width: 1200px;
     align-items: start;
   }
@@ -1077,6 +998,228 @@ header {
 .search-form button:hover {
     background-color: #c90011;
   }
+/*---------------------------------*/
+
+/* ===========================================
+   PARA MAGING MOBILE FRIENDLY, WAG 'TO IDELETE, ITETESTING PA NATIN YAN
+   ANDROID PHONE / MOBILE PHONE STYLE DETAILS
+   =========================================== */
+   @media (max-width: 768px) {
+
+    
+    body, html {
+        overflow-x: hidden;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .main-header {
+        height: 60px;
+    }
+
+    #brand-signature {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    .top-navigation {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .top-navigation a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    /* HOME section */
+    #HOME {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    #HOME a {
+        font-size: 22px;
+        margin-left: 0;
+    }
+
+    .product-image img {
+        width: 90%;
+        height: auto;
+    }
+
+    .product-info h2 {
+        font-size: 28px;
+    }
+
+    .product-info h1 {
+        font-size: 26px;
+    }
+
+    .product-info p {
+        font-size: 18px;
+    }
+
+    #price {
+        font-size: 22px;
+    }
+
+    /* Slideshow Stacking */
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Services section natin ito*/
+    .service-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .box1, .box2, .box3 {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .shop-info h1,
+    .branch-info h1,
+    .support-info h1 {
+        font-size: 18px;
+    }
+
+    .shop-info p,
+    .branch-info p,
+    .support-info p {
+        font-size: 13px;
+    }
+
+    /* Branch sections */
+    .location1, .location2 {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .location1 img, .location2 img {
+        width: 90%;
+        height: auto;
+        margin: 0;
+    }
+
+    /* About section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        width: 90%;
+        height: auto;
+        margin: 0;
+    }
+
+    .about-info h1 {
+        font-size: 22px;
+    }
+
+    .about-info p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Footer ng landing page natin*/
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Account form */
+    .form-container {
+        width: 90%;
+        height: auto;
+        margin-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    #accinput, #acc-button {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* Cart section */
+    #cart-body {
+        padding: 10px;
+        height: auto;
+    }
+
+    .cart-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .cart-containerleft,
+    .cart-containerright {
+        width: 100%;
+        height: auto;
+    }
+
+    .cart-item1 {
+        grid-template-columns: 60px 1fr;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    #shipping-input,
+    #summary-button {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    /* Category and products */
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .category-item img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .monitor-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .monitor-item {
+        width: 100%;
+    }
+
+    .monitor-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .search-form {
+        width: 90%;
+    }
+}
 
 
 
